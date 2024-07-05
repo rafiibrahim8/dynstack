@@ -1,0 +1,9 @@
+services:
+  runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dynstack-runner
+    network_mode: host
+    command: [ "DynStack.SimulationRunner", "--sim", "CS", "--url", "tcp://127.0.0.1:8080", "--id", "658f9b28-6686-40d2-8800-611bd8466215", "--settings", "Default" ]
+    
